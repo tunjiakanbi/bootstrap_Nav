@@ -55,6 +55,8 @@ body {
 #nav-contain-links {
   color: #fff;
   display: none;
+  background: red;
+  position: relative;
 }
 
 #nav-contain-links.show {
@@ -65,7 +67,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: hidden;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 
 #nav-contain-links a {

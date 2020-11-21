@@ -56,13 +56,24 @@ body {
 #nav-contain-links {
     color: #fff;
     display: none;
+    background: red;
+    position: relative;
     
     // transition: height 1s ease-in-out;
 }
+#test {
+    // background: red;
+    // width: 100vw;
+    // height: 812px;
+    // padding: 0;
+}
 #nav-contain-links.show {
+    // position: absolute;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    // overflow: hidden;
+    // height: 100vh;
+    justify-content: stretch;
 }
 #nav-contain-links a {
     color: #fff;

@@ -22,7 +22,23 @@
               });
           }
         });
+
+
+        let winH = $(window).height();
+        console.log(winH)
+        let header = $("header.fixed-top.bg-dark");
+        let header_Height = header.height();
+        let showH = winH - header_Height;
+        let showElem = $("#nav-contain-links.show")
+        console.log(showH);
+        // console.log(header_Height);
         $('button.navbar-toggler').on("click", ()=>{
             $("section#nav-contain-links").toggleClass('show');
+            // $('.show').height(winH - header_Height);
+            // show.height(winH - header_Height);
+            $("#nav-contain-links.show").height(showH);
+            $("#nav-contain-links.show").css('margin-top',header_Height);
+            // $(showElem).height(showH);
         })
     });
+
