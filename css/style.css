@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Roboto:wght@300&display=swap");
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: Baskerville;
+}
+
+.hamburger {
+  border: calc(1em/8.5) solid #fff !important;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #fff;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #fff;
+}
+
+.hamburger.is-active:hover, .hamburger.is-active:visited, .hamburger.is-active:link {
+  opacity: 1;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.hamburger-box {
+  position: relative;
+  top: 3px;
+}
+
+.navbar-brand {
+  font-family: 'Goldman', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+  color: #fff !important;
+}
+
+#nav-contain-links {
+  color: #fff;
+  display: none;
+}
+
+#nav-contain-links.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+#nav-contain-links a {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  position: relative;
+  top: 79px;
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content-divs {
+  width: 90vw;
+  height: 90vh;
+  margin: 2em;
+  padding: 1em;
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 0.5em;
+}
+
+.main-content-divs h1 {
+  font-family: 'Goldman', cursive;
+}
+
+.main-content-divs hr {
+  background-color: #000;
+}
+/*# sourceMappingURL=style.css.map */

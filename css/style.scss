@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Roboto:wght@300&display=swap');
+
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: Baskerville;
+}
+.hamburger {
+    border: calc(1em/8.5) solid #fff !important;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    background-color: #fff;
+    // opacity: 1;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #fff;
+    // opacity: 1;
+}
+.hamburger.is-active:hover, .hamburger.is-active:visited, .hamburger.is-active:link  {
+    opacity: 1;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    outline: none;
+    opacity: 1;
+}
+.hamburger-box {
+    position: relative;
+    top: 3px;
+}
+
+.navbar-brand {
+    font-family: 'Goldman', cursive;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+    color: #fff !important;   
+}
+// #nav-contain-menu {
+//     padding: 1em;
+//     width: 100%;
+//     padding-bottom: 1em;
+// }
+#nav-contain-links {
+    color: #fff;
+    display: none;
+    
+    // transition: height 1s ease-in-out;
+}
+#nav-contain-links.show {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+#nav-contain-links a {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+main {
+    position: relative;
+    top: 79px;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-content-divs {
+    width: 90vw;
+    height: 90vh;
+    margin: 2em;
+    padding: 1em;
+    background-color: rgba(128,128,128,0.3);
+
+    border-radius: 0.5em;
+    h1 {
+        font-family: 'Goldman', cursive;
+    }
+    hr {
+        background-color: #000;
+    }
+}
