@@ -16,6 +16,7 @@ body {
 .hamburger {
   border: calc(1em/8.5) solid #fff !important;
   cursor: pointer;
+  z-index: 3;
 }
 
 .hamburger-inner,
@@ -45,6 +46,10 @@ body {
   top: 3px;
 }
 
+.nav {
+  z-index: 3;
+}
+
 .navbar-brand {
   font-family: 'Goldman', cursive;
   text-transform: uppercase;
@@ -56,8 +61,17 @@ body {
 @media screen and (max-width: 991px) {
   #nav-contain-links {
     color: #fff;
+    -webkit-clip-path: circle(0vh at 90% 30%);
+            clip-path: circle(0vh at 90% 30%);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+  #nav-contain-links.show {
+    -webkit-clip-path: circle(80vh at 120% 30%);
+            clip-path: circle(80vh at 120% 30%);
   }
   .navbar-nav {
+    background-color: red;
     height: calc(100vh - 74px);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -72,26 +86,19 @@ body {
     padding: 8em 0;
     margin-top: -3em;
     margin-bottom: 3em;
+    -webkit-transition: height 3s ease-in-out;
+    transition: height 3s ease-in-out;
   }
   .navbar-nav a {
     display: inline-block;
     text-align: right;
-    margin-right: 2em;
+    margin-right: 1em;
   }
 }
 
 #nav-contain-links a {
   color: #fff;
   font-family: 'Roboto', sans-serif;
-}
-
-.hide {
-  visibility: hidden;
-}
-
-.no-transition {
-  -webkit-transition: none !important;
-  transition: none !important;
 }
 
 main {
@@ -115,9 +122,7 @@ main {
 
 .main-content-divs {
   width: 90vw;
-  height: 90vh;
-  margin: 2em;
-  padding: 1em;
+  height: 100vh;
   background-color: rgba(128, 128, 128, 0.3);
   border-radius: 0.5em;
 }
