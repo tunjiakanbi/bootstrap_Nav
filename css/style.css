@@ -48,11 +48,15 @@ body {
   top: 3px;
 }
 
-.nav {
-  z-index: 3;
+.navbar {
+  padding: 0;
 }
 
-.navbar-brand {
+.navbar #nav-contain-menu {
+  padding: .5rem 1rem;
+}
+
+.navbar .navbar-brand {
   font-family: 'Goldman', cursive;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -60,17 +64,26 @@ body {
   color: #fff !important;
 }
 
+#nav-contain-menu {
+  z-index: 1;
+}
+
+.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 @media screen and (max-width: 991px) {
   #nav-contain-links {
     color: #fff;
-    -webkit-clip-path: circle(0vh at 90% 30%);
-            clip-path: circle(0vh at 90% 30%);
+    -webkit-clip-path: circle(50vh at 110% 50%);
+            clip-path: circle(50vh at 110% 50%);
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
   #nav-contain-links.show {
-    -webkit-clip-path: circle(80vh at 120% 30%);
-            clip-path: circle(80vh at 120% 30%);
+    -webkit-clip-path: circle(120vh at 120% 50%);
+            clip-path: circle(120vh at 120% 50%);
   }
   .navbar-nav {
     background-color: red;
@@ -86,10 +99,9 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 8em 0;
-    margin-top: -3em;
-    margin-bottom: 3em;
     -webkit-transition: height 3s ease-in-out;
     transition: height 3s ease-in-out;
+    z-index: 3;
   }
   .navbar-nav a {
     display: inline-block;

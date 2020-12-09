@@ -2,8 +2,19 @@
       var $hamburger = $(".hamburger");
       $hamburger.on("click", function (e) {
         $hamburger.toggleClass("is-active");
+         
         // Do something else, like open/close menu
+    
       });
+
+      if($hamburger.hasClass('is-active')) {
+        $("body").addClass("no-scroll");
+      }
+      else{
+        $("body").removeClass("no-scroll");
+      }
+
+
       //Init scrollspy
       $("body").scrollspy({
         target: "#navigation",
