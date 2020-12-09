@@ -31,7 +31,9 @@ body {
   background-color: #fff;
 }
 
-.hamburger.is-active:hover, .hamburger.is-active:visited, .hamburger.is-active:link {
+.hamburger.is-active:hover,
+.hamburger.is-active:visited,
+.hamburger.is-active:link {
   opacity: 1;
 }
 
