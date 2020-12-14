@@ -50,6 +50,8 @@ body {
 //.5rem 1rem
 .navbar {
     padding: 0;
+    // opacity: .5;
+    // background-color: transparent !important;
     #nav-contain-menu{
         padding:.5rem 1rem;
     }
@@ -64,40 +66,6 @@ body {
 #nav-contain-menu {
     z-index: 1;
 }
-.no-scroll {
-    height: 100vh;
-    overflow-y: hidden;
-}
-
-@media screen and (max-width: 991px) {
-    #nav-contain-links {
-        color: #fff;
-        clip-path: circle(50vh at 110% 50%);
-        transition: all 1s ease-in-out;
-    }
-
-    #nav-contain-links.show {
-        clip-path: circle(120vh at 120% 50%);
-    }
-
-    .navbar-nav {
-        background-color: red;
-        height: calc(100vh - 74px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 8em 0;
-        // margin-top: -3em;
-        // margin-bottom: 3em;
-        transition: height 3s ease-in-out;
-        z-index: 3;
-        a {
-            display: inline-block;
-            text-align: right;
-            margin-right: 1em;
-        }
-    }
-}//media query ends
 
 #nav-contain-links a {
     color: #fff;
@@ -128,3 +96,46 @@ main {
         background-color: #000;
     }
 }
+
+.no-scroll {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+@media screen and (max-width: 991px) {
+    #nav-contain-links {
+        position: relative;
+        color: #fff;
+        // clip-path: circle(50vh at 110% -50%);
+        // transition: all 1s ease-in-out; //last try
+    }
+    // .collapsing {
+    //     transition: none;
+    // }
+    #nav-contain-links.show {
+        // clip-path: circle(120vh at 120% 50%);
+    }
+
+    .navbar-nav {
+        position: relative;
+        bottom: 144px;//allows red circle to overlap navigation
+        background-color: red;
+        // height: calc(100vh - 74px);
+        height:120vh;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        // margin: 8em 0;
+        padding: 8em 0;
+        // transition: display 3s ease-in-out; last try
+        // transition: height 3s ease-in-out;
+        a {
+            display: inline-block;
+            text-align: right;
+            margin-right: 1em;
+        }
+    }
+}
+//media query ends
+

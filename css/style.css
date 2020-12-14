@@ -68,48 +68,6 @@ body {
   z-index: 1;
 }
 
-.no-scroll {
-  height: 100vh;
-  overflow-y: hidden;
-}
-
-@media screen and (max-width: 991px) {
-  #nav-contain-links {
-    color: #fff;
-    -webkit-clip-path: circle(50vh at 110% 50%);
-            clip-path: circle(50vh at 110% 50%);
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-  }
-  #nav-contain-links.show {
-    -webkit-clip-path: circle(120vh at 120% 50%);
-            clip-path: circle(120vh at 120% 50%);
-  }
-  .navbar-nav {
-    background-color: red;
-    height: calc(100vh - 74px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 8em 0;
-    -webkit-transition: height 3s ease-in-out;
-    transition: height 3s ease-in-out;
-    z-index: 3;
-  }
-  .navbar-nav a {
-    display: inline-block;
-    text-align: right;
-    margin-right: 1em;
-  }
-}
-
 #nav-contain-links a {
   color: #fff;
   font-family: 'Roboto', sans-serif;
@@ -147,5 +105,39 @@ main {
 
 .main-content-divs hr {
   background-color: #000;
+}
+
+.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 991px) {
+  #nav-contain-links {
+    position: relative;
+    color: #fff;
+  }
+  .navbar-nav {
+    position: relative;
+    bottom: 144px;
+    background-color: red;
+    height: 120vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 8em 0;
+  }
+  .navbar-nav a {
+    display: inline-block;
+    text-align: right;
+    margin-right: 1em;
+  }
 }
 /*# sourceMappingURL=style.css.map */

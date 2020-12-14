@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Roboto:wght@300&display=swap');
+
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: Baskerville;
+}
+
+.hamburger {
+    border: calc(1em/8.5) solid #fff !important;
+    cursor: pointer;
+    display: none;
+    /* z-index: 3; */
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    background-color: #fff;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #fff;
+}
+
+.hamburger.is-active:hover,
+.hamburger.is-active:visited,
+.hamburger.is-active:link {
+    opacity: 1;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    outline: none;
+    opacity: 1;
+}
+.hamburger:active,
+.hamburger:focus {
+    outline: none;
+    opacity: 1;
+}
+
+.hamburger-box {
+    position: relative;
+    top: 3px;
+}
+
+main {
+    position: relative;
+    top: 79px;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-divs {
+    width: 90vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 0.5em;
+}
+h1 {
+    font-family: 'Goldman', cursive;
+}
+hr {
+    background-color: #000;
+}
+/* custom navigation */
+header {
+    height: 100px;
+    background-color: navy;
+}
+nav.topnav {
+    height: 100%;
+    display: flex;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    /* background-color: lightcoral; */
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+@media screen and (max-width: 991px) {
+    nav.topnav {
+        position: relative;
+    }
+    .hamburger {
+        display: inline;
+        position: absolute;
+        cursor: pointer;
+        align-self: center;
+        right: 5%;
+        z-index: 2;
+        border-radius: 0.5em;
+    }
+    .nav-links {
+        position: fixed;
+        background-color: navy;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        /* display: none; */
+        clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open {
+        clip-path: circle(1260px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .nav-links li a {
+        font-size: 2em;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li.fade {
+        opacity: 1;
+    }
+  }

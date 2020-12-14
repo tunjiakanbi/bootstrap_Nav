@@ -1,10 +1,19 @@
     $(document).ready(function () {
       var $hamburger = $(".hamburger");
+      let $contaiN = $('#nav-contain-links');
+      let circShow = $('#nav-contain-links.show');
+      let circnav = new gsap.timeline();
+      // let animAnchor =  $('navbar-nav a');
+      // let growCirc = new gsap.timeline();
       $hamburger.on("click", function (e) {
         $hamburger.toggleClass("is-active");
-         
+        circShow.onload = circNav();
         // Do something else, like open/close menu
-    
+        // if($contaiN.hasClass('show')){
+        //   console.log("yes");
+        //   circnav.fromTo(circShow, 2,{clipPath: "circle(50vh at 110% 50%)"},{clipPath: "circle(120vh at 120% 50%)"});
+        // }
+       
       });
 
       if($hamburger.hasClass('is-active')) {
@@ -58,5 +67,19 @@
       //     // $(showElem).height(showH);
       // })
     //}
+    // let circShow = $('#nav-contain-links.show');
+    function circNav(){
+      let circnav = gsap.timeline({
+        id: "circnav"});
+      circnav.fromTo(circShow, 2,{clipPath: "circle(50vh at 110% 50%)"},{clipPath: "circle(120vh at 120% 50%)"});
+      console.log("yes");
+      // circnav.fromTo('#nav-contain-links.show', 2,{clipPath: "circle(50vh at 110% 50%)"},{clipPath: "circle(120vh at 120% 50%)"});
+    }
+
+    //   let master = gsap.timeline();
+    //   master.add(circNav());
+       // GSDevTools.create();
+
+
   //document.ready ends here  
   });
